@@ -1,13 +1,11 @@
 <?php
 
 
-echo "you are now inside the index.php";
+require_once('haiku.php');
+$haikuClass = new Haiku();
 
 
 
 
 ?>
 
-<br>
-
-<a href="show.php"><button type='button'>Show Haiku</button></a>
