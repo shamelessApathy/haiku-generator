@@ -10,23 +10,24 @@
 *
 */
 class Haiku {
+	
+public function __construct(){
 
-function __construct()
-{
-$oneArray = ['the','it','is','I','you','me','bee','dog','cat', 'beach', 'salt', 'blue', 'red', 'green', 'sky', 'cloud','tree', 'live', 'talk', 'snake'];
-$twoArray = ['rainbow', 'pigeon', 'kitten', 'walking', 'swimming', 'breathing', 'flying', 'driving', 'looking', 'loving', 'staring', 'intense', 'water', 'ocean', 'special', 'partake', 'lyric', 'lily', 'baby', 'dolphin'];
-$threeArray = ['misery', 'company', 'compassion','trifecta', 'daffodil', 'liberty', 'direction', 'traveler', 'elephant', 'testament', 'bucaneer', 'rattlesnake', 'php', 'programmer', 'computer', 'internet', 'domestic', 'apartment', 'egregious', 'envigorate'];
+$this->oneArray = ['the','it','is','I','you','me','bee','dog','cat', 'beach', 'salt', 'blue', 'red', 'green', 'sky', 'cloud','tree', 'live', 'talk', 'snake'];
+$this->twoArray = ['rainbow', 'pigeon', 'kitten', 'walking', 'swimming', 'breathing', 'flying', 'driving', 'looking', 'loving', 'staring', 'intense', 'water', 'ocean', 'special', 'partake', 'lyric', 'lily', 'baby', 'dolphin'];
+$this->threeArray = ['misery', 'company', 'compassion','trifecta', 'daffodil', 'liberty', 'direction', 'traveler', 'elephant', 'testament', 'bucaneer', 'rattlesnake', 'php', 'programmer', 'computer', 'internet', 'domestic', 'apartment', 'egregious', 'envigorate'];
 
 // Count the length of each array
-$lengthOne =  count($oneArray) - 1;
-$lengthTwo = count($twoArray) - 1;
-$lengthThree = count($threeArray) -1;
+$this->lengthOne =  count($oneArray) - 1;
+$this->lengthTwo = count($twoArray) - 1;
+$this->lengthThree = count($threeArray) -1;
 
 // Declaring $lines before going to switch function, 3 lines, 5-7-5
-$lineOne =  [];
-$lineTwo = [];
-$lineThree = [];
+$this->lineOne =  [];
+$this->lineTwo = [];
+$this->lineThree = [];
 }
+
 
 
 // Assigning static var for random number from the randArray() function
@@ -38,23 +39,23 @@ $lineThree = [];
 * For all of the pickOne, pickTwo, and pickThree functions, $num represents the number of word that was picked for that particular line.
 *
 */
-public function pickOne($num)
+public function pickOne()
 {
-	$random = rand(0,$lengthOne);
-	$word = $oneArray[$random];
+	$random = rand(0,$this->lengthOne);
+	$word = $this->oneArray[$random];
 	return $word;
 }
 
-public function pickTwo($num)
+public function pickTwo()
 {
-	$random = rand(0,$lengthTwo);
+	$random = rand(0,$this->lengthTwo);
 	$word = $twoArray[$random];
 	return $word;
 }
 
-public function pickThree($num)
+public function pickThree()
 {
-	$random = rand(0,$lengthOne);
+	$random = rand(0,$this->lengthThree);
 	$word = $threeArray[$random];
 	return $word;
 }
