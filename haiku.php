@@ -49,14 +49,14 @@ public function pickOne()
 public function pickTwo()
 {
 	$random = rand(0,$this->lengthTwo);
-	$word = $twoArray[$random];
+	$word = $this->twoArray[$random];
 	return $word;
 }
 
 public function pickThree()
 {
 	$random = rand(0,$this->lengthThree);
-	$word = $threeArray[$random];
+	$word = $this->threeArray[$random];
 	return $word;
 }
 // Simple function to pick a random number between 1 and 3, then it's passed to the switch function
@@ -66,16 +66,15 @@ public function randArray()
 	return $rand;
 }
 // Switch function that based on the randArray() function picks a random word from that particular array
-public function switchPick()
+public function switchPick($randomNumber)
 {
-	$randomNumber = $this->randArray();
 	switch ($randomNumber)
 	{
-		case 1: $wordOne = $this->pickOne(1);
+		case 1: $wordOne = $this->pickOne();
 		break;
-		case 2: $wordOne = $this->pickTwo(1);
+		case 2: $wordOne = $this->pickTwo();
 		break;
-		case 3: $wordOne = $this->pickThree(1);
+		case 3: $wordOne = $this->pickThree();
 		break;
 	}
 }
